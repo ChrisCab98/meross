@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name meross)(type Legacy)(uri /home/cabantous/Documents/homekit/smartSurge/hardware/meross/meross.lib)(options "")(descr ""))
+  (lib (name meross-rescue)(type Legacy)(uri ${KIPRJMOD}/meross-rescue.lib)(options "")(descr ""))
 )

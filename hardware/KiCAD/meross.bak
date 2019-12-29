@@ -31,7 +31,7 @@ U 1 1 5D5A958F
 P 4075 6400
 F 0 "J3" H 4048 6280 50  0000 R CNN
 F 1 "Conn_01x04_Male" H 4048 6371 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 4075 6400 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x02_P2.54mm_Vertical" H 4075 6400 50  0001 C CNN
 F 3 "~" H 4075 6400 50  0001 C CNN
 	1    4075 6400
 	-1   0    0    1   
@@ -50,17 +50,17 @@ $EndComp
 $Comp
 L DVB_Power:+3.3V #PWR018
 U 1 1 5D5A96C5
-P 3875 6200
-F 0 "#PWR018" H 3875 6130 30  0001 C CNN
-F 1 "+3.3V" H 3875 6338 30  0000 C CNN
-F 2 "" H 3775 6000 50  0001 C CNN
-F 3 "" H 3875 6100 50  0001 C CNN
-	1    3875 6200
+P 3700 6400
+F 0 "#PWR018" H 3700 6330 30  0001 C CNN
+F 1 "+3.3V" H 3700 6538 30  0000 C CNN
+F 2 "" H 3600 6200 50  0001 C CNN
+F 3 "" H 3700 6300 50  0001 C CNN
+	1    3700 6400
 	1    0    0    -1  
 $EndComp
 Text Label 3875 6300 2    39   ~ 0
 Tx
-Text Label 3875 6400 2    39   ~ 0
+Text Label 3875 6200 2    39   ~ 0
 Rx
 $Comp
 L DVB_Power:GND #PWR011
@@ -610,7 +610,7 @@ $Comp
 L DVB_R:R_0065 R4
 U 1 1 5D5D3A74
 P 4525 3675
-F 0 "R4" H 4600 3675 50  0000 L CNN
+F 0 "R4" V 4425 3625 50  0000 L CNN
 F 1 "R_0065" H 4525 3475 50  0001 C CNN
 F 2 "DVB_Resistors:R_0603" H 4525 3325 50  0001 C CNN
 F 3 "generic" H 4525 3400 50  0001 C CNN
@@ -624,7 +624,7 @@ $Comp
 L DVB_R:R_0065 R5
 U 1 1 5D5D3B44
 P 4775 3675
-F 0 "R5" H 4850 3675 50  0000 L CNN
+F 0 "R5" V 4675 3625 50  0000 L CNN
 F 1 "R_0065" H 4775 3475 50  0001 C CNN
 F 2 "DVB_Resistors:R_0603" H 4775 3325 50  0001 C CNN
 F 3 "generic" H 4775 3400 50  0001 C CNN
@@ -846,8 +846,6 @@ F 3 "" H 1550 6275 50  0001 C CNN
 $EndComp
 Text Label 1350 6125 2    39   ~ 0
 RST
-NoConn ~ 1750 6125
-NoConn ~ 1750 6525
 $Comp
 L DVB_C:C_0029 C1
 U 1 1 5D5FCC22
@@ -901,8 +899,6 @@ F 3 "" H 2875 6275 50  0001 C CNN
 $EndComp
 Text Label 2675 6125 2    39   ~ 0
 GPIO0
-NoConn ~ 3075 6125
-NoConn ~ 3075 6525
 $Comp
 L DVB_C:C_0029 C3
 U 1 1 5D5FE435
@@ -927,50 +923,8 @@ Wire Wire Line
 	2675 6475 2675 6525
 Wire Wire Line
 	2675 6525 2875 6525
-Connection ~ 2875 6525
 $Comp
-L DVB_D:D_0001 D1
-U 1 1 5D5FFE1D
-P 4550 4225
-F 0 "D1" H 4550 4325 50  0000 C CNN
-F 1 "D_0001" H 4550 4075 50  0001 C CNN
-F 2 "DVB_LED:LED_0603-red" H 4550 3975 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/83172/tlmo1000.pdf" H 4550 3875 50  0001 C CNN
-F 4 "TLMS1000-GS08" H 4550 3775 50  0001 C CNN "Field4"
-F 5 "2mA" H 4550 3575 50  0001 C CNN "Field5"
-F 6 "LED" H 4550 3675 50  0001 C CNN "Field6"
-F 7 "RED" H 4550 4100 50  0000 C CNN "Field7"
-F 8 "TOP" H 4550 3475 50  0001 C CNN "Field8"
-	1    4550 4225
-	1    0    0    -1  
-$EndComp
-$Comp
-L DVB_R:R_0027 R6
-U 1 1 5D60093C
-P 4850 4225
-F 0 "R6" V 4750 4225 50  0000 C CNN
-F 1 "R_0027" H 4850 4025 50  0001 C CNN
-F 2 "DVB_Resistors:R_0603" H 4850 3875 50  0001 C CNN
-F 3 "generic" H 4850 3950 50  0001 C CNN
-F 4 "220" V 4850 4225 50  0000 C CNN "Field4"
-F 5 "1%" V 4600 4125 50  0001 L CNN "Field5"
-F 6 "100mW" V 4675 4125 50  0001 L CNN "Field6"
-	1    4850 4225
-	0    1    1    0   
-$EndComp
-$Comp
-L DVB_Power:+3.3V #PWR017
-U 1 1 5D601797
-P 5000 4225
-F 0 "#PWR017" H 5000 4155 30  0001 C CNN
-F 1 "+3.3V" H 5000 4363 30  0000 C CNN
-F 2 "" H 4900 4025 50  0001 C CNN
-F 3 "" H 5000 4125 50  0001 C CNN
-	1    5000 4225
-	1    0    0    -1  
-$EndComp
-$Comp
-L meross:VTX-214-005-012 PS1
+L meross-rescue:VTX-214-005-012-meross PS1
 U 1 1 5D6062E8
 P 2025 1200
 F 0 "PS1" H 2025 1567 50  0000 C CNN
@@ -982,8 +936,6 @@ F 3 "http://www.vigortronix.com/15WattSMPSPCBModuleAC-DC" H 3125 400 50  0001 C 
 $EndComp
 Wire Wire Line
 	4175 4625 4350 4625
-Wire Wire Line
-	4400 4225 4175 4225
 NoConn ~ 4175 4125
 NoConn ~ 2975 4325
 NoConn ~ 2975 4425
@@ -991,50 +943,10 @@ NoConn ~ 2975 4525
 NoConn ~ 2975 4625
 NoConn ~ 2975 4725
 NoConn ~ 2975 4825
-$Comp
-L DVB_L:L_0004 L1
-U 1 1 5D60CB8E
-P 2575 1100
-F 0 "L1" H 2575 1380 50  0000 C CNN
-F 1 "L_0004" H 2575 900 50  0001 C CNN
-F 2 "DVB_Inductors:L_2020-Vishay" H 2575 825 50  0001 C CNN
-F 3 "http://www.farnell.com/datasheets/2050374.pdf?_ga=2.106835719.526238941.1497949497-421346633.1483631847" H 2575 750 50  0001 C CNN
-F 4 "IHLP2020BZER4R7M01" H 2575 675 50  0001 C CNN "Field4"
-F 5 "5A" H 2575 1289 50  0000 C CNN "Field5"
-F 6 "COIL" H 2575 600 50  0001 C CNN "Field6"
-F 7 "4.7µH" H 2575 1198 50  0000 C CNN "Field7"
-	1    2575 1100
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:CP C7
-U 1 1 5D60D031
-P 2725 1250
-F 0 "C7" H 2843 1296 50  0000 L CNN
-F 1 "220uf" H 2843 1205 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 2763 1100 50  0001 C CNN
-F 3 "~" H 2725 1250 50  0001 C CNN
-	1    2725 1250
-	1    0    0    -1  
-$EndComp
-Connection ~ 2725 1100
-$Comp
-L DVB_Power:GND #PWR0101
-U 1 1 5D60D425
-P 2725 1400
-F 0 "#PWR0101" H 2725 1240 30  0001 C CNN
-F 1 "GND" H 2729 1262 30  0000 C CNN
-F 2 "" H 2625 1050 50  0001 C CNN
-F 3 "" H 2725 1150 50  0001 C CNN
-	1    2725 1400
-	1    0    0    -1  
-$EndComp
 Connection ~ 3425 1100
 Connection ~ 3025 1100
 Wire Wire Line
 	3025 1100 3425 1100
-Wire Wire Line
-	2725 1100 3025 1100
 Wire Notes Line
 	875  5950 3575 5950
 Wire Notes Line
@@ -1068,10 +980,10 @@ Wire Notes Line
 Text Notes 5525 775  0    50   ~ 0
 Power
 $Comp
-L Connector:Conn_01x01_Female J?
+L Connector:Conn_01x01_Female J7
 U 1 1 5D61D18F
 P 10000 4825
-F 0 "J?" V 9940 4737 50  0000 R CNN
+F 0 "J7" V 9940 4737 50  0000 R CNN
 F 1 "Conn_01x01_Female" V 9849 4737 50  0000 R CNN
 F 2 "TestPoint:TestPoint_Loop_D2.54mm_Drill1.5mm_Beaded" H 10000 4825 50  0001 C CNN
 F 3 "~" H 10000 4825 50  0001 C CNN
@@ -1079,10 +991,10 @@ F 3 "~" H 10000 4825 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Connector:Conn_01x01_Female J?
+L Connector:Conn_01x01_Female J5
 U 1 1 5D61D2BA
 P 8175 4825
-F 0 "J?" V 8115 4737 50  0000 R CNN
+F 0 "J5" V 8115 4737 50  0000 R CNN
 F 1 "Conn_01x01_Female" V 8024 4737 50  0000 R CNN
 F 2 "TestPoint:TestPoint_Loop_D2.54mm_Drill1.5mm_Beaded" H 8175 4825 50  0001 C CNN
 F 3 "~" H 8175 4825 50  0001 C CNN
@@ -1090,10 +1002,10 @@ F 3 "~" H 8175 4825 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Connector:Conn_01x01_Female J?
+L Connector:Conn_01x01_Female J4
 U 1 1 5D61D61D
 P 8175 2950
-F 0 "J?" V 8115 2862 50  0000 R CNN
+F 0 "J4" V 8115 2862 50  0000 R CNN
 F 1 "Conn_01x01_Female" V 8024 2862 50  0000 R CNN
 F 2 "TestPoint:TestPoint_Loop_D2.54mm_Drill1.5mm_Beaded" H 8175 2950 50  0001 C CNN
 F 3 "~" H 8175 2950 50  0001 C CNN
@@ -1101,10 +1013,10 @@ F 3 "~" H 8175 2950 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Connector:Conn_01x01_Female J?
+L Connector:Conn_01x01_Female J6
 U 1 1 5D61D9D1
 P 10000 2950
-F 0 "J?" V 9940 2862 50  0000 R CNN
+F 0 "J6" V 9940 2862 50  0000 R CNN
 F 1 "Conn_01x01_Female" V 9849 2862 50  0000 R CNN
 F 2 "TestPoint:TestPoint_Loop_D2.54mm_Drill1.5mm_Beaded" H 10000 2950 50  0001 C CNN
 F 3 "~" H 10000 2950 50  0001 C CNN
@@ -1112,10 +1024,10 @@ F 3 "~" H 10000 2950 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Connector:Conn_01x01_Female J?
+L Connector:Conn_01x01_Female J1
 U 1 1 5D61DB87
 P 1425 1100
-F 0 "J?" H 1319 875 50  0000 C CNN
+F 0 "J1" H 1319 875 50  0000 C CNN
 F 1 "Conn_01x01_Female" H 1850 1100 50  0000 C CNN
 F 2 "TestPoint:TestPoint_Loop_D2.54mm_Drill1.5mm_Beaded" H 1425 1100 50  0001 C CNN
 F 3 "~" H 1425 1100 50  0001 C CNN
@@ -1123,14 +1035,30 @@ F 3 "~" H 1425 1100 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Connector:Conn_01x01_Female J?
+L Connector:Conn_01x01_Female J2
 U 1 1 5D61E08C
 P 1425 1300
-F 0 "J?" H 1319 1075 50  0000 C CNN
+F 0 "J2" H 1319 1075 50  0000 C CNN
 F 1 "Conn_01x01_Female" H 1850 1300 50  0000 C CNN
 F 2 "TestPoint:TestPoint_Loop_D2.54mm_Drill1.5mm_Beaded" H 1425 1300 50  0001 C CNN
 F 3 "~" H 1425 1300 50  0001 C CNN
 	1    1425 1300
 	-1   0    0    1   
 $EndComp
+Wire Wire Line
+	3700 6400 3875 6400
+Wire Wire Line
+	2425 1100 3025 1100
+Connection ~ 2875 6525
+Wire Wire Line
+	2875 6125 3075 6125
+Connection ~ 2875 6125
+Wire Wire Line
+	3075 6525 2875 6525
+Wire Wire Line
+	1750 6125 1550 6125
+Connection ~ 1550 6125
+Wire Wire Line
+	1550 6525 1750 6525
+NoConn ~ 4175 4225
 $EndSCHEMATC
